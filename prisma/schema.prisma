@@ -29,8 +29,10 @@ model Project {
 
     icon String? @db.VarChar(255)
 
-    createdAt DateTime @default(now())
-    updatedAt DateTime @updatedAt
+    createdAt DateTime @default(now()) //TODO: generate this field using GitHub API
+    updatedAt DateTime @updatedAt //TODO: Remove from database and generate this field using GitHub API
+
+    @@map("projects")
 }
 
 model Category {
@@ -39,7 +41,12 @@ model Category {
     name String @unique @db.VarChar(200) 
     slug String @unique @db.VarChar(200) 
 
+    badgeTextColor String @db.VarChar(7) @default("#FFFFFF")
+    badgeBackgroundColor String @db.VarChar(7) @default("#000000")
+
     projects Project[]
+
+    @@map("categories")
 }
 
 model Technology {
@@ -48,13 +55,20 @@ model Technology {
     name String @unique @db.VarChar(200) 
     slug String @unique @db.VarChar(200) 
 
+    badgeTextColor String @db.VarChar(7) @default("#FFFFFF")
+    badgeBackgroundColor String @db.VarChar(7) @default("#000000")
+
     icon String? @db.VarChar(255)
 
     projects Project[]
+
+    @@map("technologies")
 }
 
 enum ProjectStatus {
     IN_PROGRESS
     COMPLETED
     ON_HOLD
+
+    @@map("project_statuses") 
 }

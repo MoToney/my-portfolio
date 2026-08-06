@@ -1,10 +1,27 @@
 import Image from "next/image";
+import { findFeatured } from "../features/projects/repository";
+import { ProjectPreview } from "../features/projects/types";
+import FeaturedProjects from "../components/featured-projects";
+import ContactForm from "@/src/components/contact-form";
+import AboutSection from "../features/about/about-section";
 
-export default function Home() {
-  return (
+import ResumeViewer from "../features/resume/resume-viewer";
+
+
+export default async function Home() {
+    const projects: ProjectPreview[] = await findFeatured();
+
     
-      <section>
-          <h1> Welcome </h1>
-      </section>
-    )
+
+    return (
+    <main className="container mx-auto px-4 py-12 space-y-16">
+      <AboutSection />
+      <FeaturedProjects projects={projects} />
+
+      <ResumeViewer />
+      <div className="border-t pt-12">
+        <ContactForm />
+      </div>
+    </main>
+  );
 }
