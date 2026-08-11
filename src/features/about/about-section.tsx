@@ -1,7 +1,7 @@
 export default function AboutSection() {
     return (
         <section>
-            <h1 className="text-3xl font-bold underline"> About Me </h1>
+            <h2 className="text-3xl font-bold mb-4"> About Me </h2>
                 <p>
                     Hello, my name is Maurice Toney I am a recent graduate with a Bachelor’s of Science in Computer Science.
                     With my roots being in the Austin,Texas metro area and New Orleans,Louisiana.

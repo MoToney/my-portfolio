@@ -1,8 +1,8 @@
 import Link from "next/link";
 
-import ProjectCard from "@/src/components/project-card";
+import ProjectPreviewCard from "@/src/features/projects/components/project-preview-card";
 import { Button } from "@/src/components/ui/button";
-import { ProjectPreview } from "../features/projects/types";
+import { ProjectPreview } from "../types";
 
 export default function FeaturedProjects({
     projects,
@@ -12,7 +12,7 @@ export default function FeaturedProjects({
     return (
         <section className="space-y-8">
             <div className="flex items-center justify-between">
-                <h2 className="text-3xl font-bold">Projects</h2>
+                <h2 className="text-3xl font-bold mb-4">Projects</h2>
 
                 <Button asChild size="lg">
                     <Link href="/projects">
@@ -32,7 +32,7 @@ export default function FeaturedProjects({
                                 : ""
                         }
                     >
-                        <ProjectCard project={project} />
+                        <ProjectPreviewCard project={project} />
                     </div>
                 ))}
             </div>

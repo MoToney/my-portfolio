@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Maurice Toney Portfolio",
+  title: "Maurice Toney",
   description: "Portfolio of Maurice Toney, a software engineer and web developer.",
 };
 
