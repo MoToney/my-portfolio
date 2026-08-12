@@ -1,3 +1,4 @@
+
 import { findAll } from "../features/projects/repository";
 import { ProjectDetail } from "../features/projects/types";
 import ContactForm from "@/src/features/contact/components/contact-form";
@@ -5,7 +6,6 @@ import AboutSection from "../features/about/about-section";
 import ProjectCarousel from "../features/projects/components/project-carousel";
 import { StickyNavigation } from "../components/sticky-navigation";
 import { Toaster } from "../components/ui/sonner";
-
 
 export default async function Home() {
   const projects: ProjectDetail[] = await findAll();
