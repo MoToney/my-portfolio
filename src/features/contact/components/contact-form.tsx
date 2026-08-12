@@ -29,11 +29,12 @@ export default function ContactForm() {
 
     const onSubmit = async (data: ContactEmailValues) => {
         if (!captchaToken) {
+            const message = "Please complete the CAPTCHA"
             setError("root", {
                 type: "captcha",
-                message: "Please complete the CAPTCHA.",
+                message: message,
             });
-            toast.error("Please complete the CAPTCHA.");
+            toast.error(message);
             return;
         }
 
