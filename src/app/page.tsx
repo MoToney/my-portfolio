@@ -7,7 +7,6 @@ import ProjectCarousel from "../features/projects/components/project-carousel";
 import { StickyNavigation } from "../components/sticky-navigation";
 import { Toaster } from "../components/ui/sonner";
 
-export const dynamic = "force-dynamic";
 
 export default async function Home() {
   const projects: ProjectDetail[] = await findAll();
