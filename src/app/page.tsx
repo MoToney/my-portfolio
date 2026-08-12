@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { findAll } from "../features/projects/repository";
 import { ProjectDetail } from "../features/projects/types";
 import ContactForm from "@/src/features/contact/components/contact-form";

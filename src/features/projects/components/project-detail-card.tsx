@@ -1,6 +1,6 @@
 import { Button } from "@/src/components/ui/button";
-import { ProjectDetail, ProjectPreview } from "@/src/features/projects/types";
-import { ArrowUpRightIcon, ChevronRightIcon } from "lucide-react"
+import { ProjectDetail} from "@/src/features/projects/types";
+import { ArrowUpRightIcon} from "lucide-react"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle, } from "@/src/components/ui/card"
 import TechBadge from "@/src/features/projects/components/tech-badge";
 import MoreTooltip from "@/src/components/more-tooltip";

@@ -1,8 +1,4 @@
-import Link from "next/link";
-
-import ProjectPreviewCard from "@/src/features/projects/components/project-preview-card";
-import { Button } from "@/src/components/ui/button";
-import { ProjectDetail, ProjectPreview } from "../types";
+import { ProjectDetail } from "../types";
 import ProjectDetailCard from "./project-detail-card";
 
 export default function ProjectDisplay({
