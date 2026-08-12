@@ -37,7 +37,7 @@ export default function ProjectCarousel({
     };
 
     return (
-        <>
+        <section id="projects">
         <h2 className="text-3xl font-bold mb-4">Projects</h2>
         <div className="mt-4 text-center text-sm text-muted-foreground">
                 {startIndex + 1}–{Math.min(startIndex + 4, projects.length)} of{" "}
@@ -83,7 +83,7 @@ export default function ProjectCarousel({
                 <ChevronRightIcon className="size-5" />
             </Button>
         </div>
-        </>
+        </section>
     );
 }
 

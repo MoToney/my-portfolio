@@ -1,31 +1,40 @@
 export default function AboutSection() {
     return (
-        <section>
+        <section id="about">
             <h2 className="text-3xl font-bold mb-4"> About Me </h2>
-                <p>
-                    Hello, my name is Maurice Toney I am a recent graduate with a Bachelor’s of Science in Computer Science.
-                    With my roots being in the Austin,Texas metro area and New Orleans,Louisiana.
-                </p>
-                <br></br>
-                <p>
-                    I am well-versed in many aspects of computers but I lean heaviest towards software.
-                    In particular I am skilled in Python, Java, and C++, with
-                    experience building full-stack applications and machine learning models.
-                </p>
-                <br></br>
+            <p>
+                Hey, my name’s Maurice. I’m a recent graduate with a Bachelor of Science in Computer Science.
+                I’m well-versed in many areas of computing, but my strongest focus is software engineering.
+                I’m particularly skilled in Python, Java, and C++, with experience building full-stack applications and machine learning models.
 
-                <p>
-                    Outside of programming and computer science as a whole,  I like to think I’m a little enigmatic.
-                    I love so-called “nerdy” things like History, Harry Potter, Star Wars, Game of Thrones, Lord of the Rings,
-                    Percy Jackson, comics, Dragon Ball Z, chess, Marvel easter egg videos, etc … but I also love the UFC,
-                    basketball, boxing, and the New Orleans Saints.
-                </p>
-                <br></br>
+            </p>
+            <br></br>
+            <p>
+                One of my greatest strengths is my ability to combine technical knowledge with strong interpersonal skills
+                and an understanding of broader areas such as business, finance, and law.
+                I have a strong aptitude for making thoughtful decisions,
+                something I’ve seen reflected in my work with areas like domain-driven design and data engineering.
+            </p>
+            <br></br>
+            <p>
+                I’m committed to learning and doing the best I can in every area of my life. I love technology because
+                there is rarely a single universally correct solution. Every problem presents an opportunity to learn something new,
+                and I genuinely enjoy that challenge. The drive to improve, solve difficult problems, and make an
+                impact in this industry rivals the feeling I’ve experienced from playing sports.
+            </p>
+            <br></br>
 
-                <p>
-                    I believe for someone I’m yet to meet, the most self-illuminating characteristic I can share about
-                    myself is my desire to be a positive force in the world and more specifically my community.
-                </p>
+            <p>
+                Outside of technology, I have a diverse range of interests. I love history and have a love-hate relationship with chess.
+                I enjoy being in large, crowded spaces, whether that means museums, sporting events, parks, the Las Vegas Strip, or Bourbon Street.
+                I follow MMA, basketball, boxing, and football, and I’m becoming an increasingly interested soccer fan,
+                particularly through the World Cup and Champions League.
+            </p>
+            <br></br>
+
+            <p>
+                Welcome to my website. Feel free to leave a message below.
+            </p>
 
         </section>
     )

@@ -1,14 +1,14 @@
 import { Html, Body, Heading, Text, } from "react-email";
-import { ContactFormValues } from "@/src/schemas/contact";
+import { ContactEmailValues } from "@/src/schemas/contact";
 
-type ContactNotificationProps = ContactFormValues
+type ContactNotificationProps = ContactEmailValues;
 
-export default function ContactNotification(props: ContactNotificationProps ) {
+export default function ContactEmail(props: ContactNotificationProps ) {
   return (
     <Html>
       <Body>
         <Heading>
-          New Portfolio Contact {props.company ? `from ${props.company}` : ""}
+          {props.name} {props.company ? ` from ${props.company}` : ""}
         </Heading>
 
         <Text>
@@ -17,6 +17,7 @@ export default function ContactNotification(props: ContactNotificationProps ) {
 
         <Text>
           Email: {props.email}
+          {props.phone_number ? ` ${props.phone_number}`: "" }
         </Text>
 
         <Text>

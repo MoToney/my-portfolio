@@ -30,7 +30,7 @@ export default function ProjectDisplay({
                         <ProjectDetailCard project={project} />
                     </div>
                 ))}
-            </div>
+            </div>        
         </section>
     );
 }

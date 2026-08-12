@@ -1,26 +1,31 @@
 import Image from "next/image";
-import { findAll, findFeatured } from "../features/projects/repository";
-import { ProjectDetail, ProjectPreview } from "../features/projects/types";
-import FeaturedProjects from "../features/projects/components/featured-projects";
+import { findAll } from "../features/projects/repository";
+import { ProjectDetail } from "../features/projects/types";
 import ContactForm from "@/src/features/contact/components/contact-form";
 import AboutSection from "../features/about/about-section";
-
-import ResumeViewer from "../features/resume/components/resume-viewer";
 import ProjectCarousel from "../features/projects/components/project-carousel";
+import { StickyNavigation } from "../components/sticky-navigation";
+import { Toaster } from "../components/ui/sonner";
 
 
-export default async function Home() {    
-    const p: ProjectDetail[] = await findAll();
+export default async function Home() {
+  const projects: ProjectDetail[] = await findAll();
+  return (
+    <>
+      <header className="relative flex items-center justify-center">
+        <span className="text-5xl font-bold text-[#D3BC8D] [-webkit-text-stroke:2px_black]">
+          Maurice Toney
+        </span>        
+        <StickyNavigation />
+      </header>
 
-    
-
-    return (
-    <main className="container mx-auto px-4 py-12 space-y-16">
-      <AboutSection />
-      <ProjectCarousel projects={p} />
-      <div className="border-t pt-12">
+      <main className="container mx-auto px-4 py-12 space-y-16">
+        <AboutSection />
+        <ProjectCarousel projects={projects} />
         <ContactForm />
-      </div>
-    </main>
+        <Toaster/>
+        
+      </main>
+    </>
   );
 }
